@@ -111,10 +111,12 @@ if (! model_features_contained) {
 readr::write_delim(
   dplyr::filter(fusion_data, prediction_class == "positive"), 
   output_file, 
-  delim = ";")
+  delim = ",",
+  quote = 'needed')
 
 # write additional output file with all candidate fusion genes
 readr::write_delim(
   fusion_data, 
   paste0(stringr::str_replace(output_file, "\\.csv", ""), ".all.csv"), 
-  delim = ";")
+  delim = ",",
+  quote = 'needed')

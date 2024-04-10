@@ -21,6 +21,7 @@ process FUSION_CATCHER {
 
     //conda ("${baseDir}/environments/fusioncatcher.yml")
     conda "/public/home/lijf/env/miniconda3/envs/easyfuse-fusioncatcher"
+    publishDir "${params.output}/${name}/fusioncatcher", mode: 'copy'
 
     input:
       tuple val(name), path(fastq1), file(fastq2)
@@ -46,6 +47,7 @@ process STAR_FUSION {
 
     //conda ("${baseDir}/environments/starfusion.yml")
     conda "/public/home/lijf/env/miniconda3/envs/easyfuse-starfusion"
+    publishDir "${params.output}/${name}/star_fusion", mode: 'copy'
 
     input:
       tuple val(name), path(fastq1), file(fastq2)
@@ -71,6 +73,7 @@ process ARRIBA {
 
     //conda ("${baseDir}/environments/arriba.yml")
     conda "/public/home/lijf/env/miniconda3/envs/easyfuse-arriba"
+    publishDir "${params.output}/${name}/arriba", mode: 'copy'
 
     input:
       tuple val(name), path(bam)
