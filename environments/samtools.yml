@@ -1,4 +1,4 @@
-name: samtools
+name: easyfuse-samtools
 channels:
   - conda-forge
   - bioconda

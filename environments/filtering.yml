@@ -1,4 +1,4 @@
-name: filtering
+name: easyfuse-filtering
 channels:
   - conda-forge
   - bioconda

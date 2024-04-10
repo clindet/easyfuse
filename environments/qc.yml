@@ -1,4 +1,4 @@
-name: qc
+name: easyfuse-qc
 channels:
   - conda-forge
   - bioconda

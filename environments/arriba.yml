@@ -1,4 +1,4 @@
-name: arriba
+name: easyfuse-arriba
 channels:
   - conda-forge
   - bioconda

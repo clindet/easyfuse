@@ -1,4 +1,4 @@
-name: requantification
+name: easyfuse-requantification
 channels:
   - conda-forge
   - bioconda

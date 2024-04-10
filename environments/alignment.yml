@@ -1,4 +1,4 @@
-name: alignment
+name: easyfuse-alignment
 channels:
   - conda-forge
   - bioconda

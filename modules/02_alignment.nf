@@ -1,10 +1,11 @@
 
 process STAR {
-    cpus 6
-    memory "32g"
+    cpus 20
+    memory "60g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/alignment.yml")
+    //conda ("${baseDir}/environments/alignment.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-alignment"
 
     input:
       tuple val(name), path(fastq1), file(fastq2)
@@ -44,11 +45,12 @@ process STAR {
 
 
 process STAR_ARRIBA {
-    cpus 6
-    memory "32g"
+    cpus 20
+    memory "60g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/alignment.yml")
+    //conda ("${baseDir}/environments/alignment.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-alignment"
 
     input:
       tuple val(name), path(fastq1), file(fastq2)
@@ -84,11 +86,12 @@ process STAR_ARRIBA {
 
 
 process READ_FILTER {
-    cpus 1
-    memory "8g"
+    cpus 4
+    memory "12g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/filtering.yml")
+    //conda ("${baseDir}/environments/filtering.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-filtering"
 
     input:
       tuple val(name), path(bam)
@@ -105,11 +108,12 @@ process READ_FILTER {
 }
 
 process BAM2FASTQ {
-    cpus 6
-    memory "8g"
+    cpus 10
+    memory "12g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/samtools.yml")
+    //conda ("${baseDir}/environments/samtools.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-samtools"
 
     input:
       tuple val(name), path(bam)

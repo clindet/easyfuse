@@ -1,4 +1,4 @@
-name: annotation
+name: easyfuse-annotation
 channels:
   - conda-forge
   - bioconda

@@ -4,7 +4,8 @@ process FUSION_CATCHER_INDEX {
     memory "32g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/fusioncatcher.yml")
+    //conda ("${baseDir}/environments/fusioncatcher.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-fusioncatcher"
 
     script:
     """
@@ -18,7 +19,8 @@ process FUSION_CATCHER {
     memory "32g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/fusioncatcher.yml")
+    //conda ("${baseDir}/environments/fusioncatcher.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-fusioncatcher"
 
     input:
       tuple val(name), path(fastq1), file(fastq2)
@@ -42,7 +44,8 @@ process STAR_FUSION {
     memory "32g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/starfusion.yml")
+    //conda ("${baseDir}/environments/starfusion.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-starfusion"
 
     input:
       tuple val(name), path(fastq1), file(fastq2)
@@ -66,7 +69,8 @@ process ARRIBA {
     memory "10g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/arriba.yml")
+    //conda ("${baseDir}/environments/arriba.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-arriba"
 
     input:
       tuple val(name), path(bam)

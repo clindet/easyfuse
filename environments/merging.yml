@@ -1,4 +1,4 @@
-name: merging
+name: easyfuse-merging
 channels:
   - conda-forge
   - bioconda

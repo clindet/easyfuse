@@ -3,7 +3,8 @@ process FUSION_FILTER {
     memory "8g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/filtering.yml")
+    //conda ("${baseDir}/environments/filtering.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-filtering"
 
     input:
       tuple val(name), path(bam), path(annot_fusions_csv), path(annot_fusions_csv_debug), path(annot_fusions_fasta), path(read_stats)
@@ -27,7 +28,8 @@ process FUSION2CSV {
     tag "${name}"
     //publishDir "${params.output}/${name}", mode: 'copy'
 
-    conda ("${baseDir}/environments/filtering.yml")
+    //conda ("${baseDir}/environments/filtering.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-filtering"
 
     input:
       tuple val(name), path(annot_fusions_csv), path(annot_fusions_csv_debug), path(annot_fusions_fasta)
@@ -48,7 +50,8 @@ process CSV2FASTA {
     memory "1g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/requantification.yml")
+    //conda ("${baseDir}/environments/requantification.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-requantification"
 
     input:
       tuple val(name), path(formatted_csv)
@@ -71,7 +74,8 @@ process STAR_INDEX {
     memory "8g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/requantification.yml")
+    //conda ("${baseDir}/environments/requantification.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-requantification"
     
     input:
       tuple val(name), path(formatted_fasta)
@@ -97,7 +101,8 @@ process STAR_CUSTOM {
     tag "${name}"
     //publishDir "${params.output}/${name}", mode: 'copy'
 
-    conda ("${baseDir}/environments/requantification.yml")
+    //conda ("${baseDir}/environments/requantification.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-requantification"
 
     input:
       tuple val(name), path(fastq1), file(fastq2), path(star_index)
@@ -126,7 +131,8 @@ process READ_COUNT {
   tag "${name}"
   //publishDir "${params.output}/${name}", mode: 'copy'
 
-  conda ("${baseDir}/environments/requantification.yml")
+  //conda ("${baseDir}/environments/requantification.yml")
+  conda "/public/home/lijf/env/miniconda3/envs/easyfuse-requantification"
 
   input:
     tuple val(name), path(bam), path(formatted_csv)

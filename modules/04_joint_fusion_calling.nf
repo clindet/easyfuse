@@ -5,7 +5,8 @@ process FUSION_PARSER {
     tag "${name}"
     //publishDir "${params.output}/${name}", mode: 'copy'
 
-    conda ("${baseDir}/environments/filtering.yml")
+    //conda ("${baseDir}/environments/filtering.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-filtering"
 
     input:
       tuple val(name), path(fusion_catcher_1), path(fusion_catcher_2), path(star_fusion), path(arriba_1), path(arriba_2)
@@ -33,7 +34,8 @@ process FUSION_ANNOTATION {
     tag "${name}"
     //publishDir "${params.output}/${name}", mode: 'copy'
 
-    conda ("${baseDir}/environments/annotation.yml")
+    //conda ("${baseDir}/environments/annotation.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-annotation"
 
     input:
       tuple val(name), path(fusions)

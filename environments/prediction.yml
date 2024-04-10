@@ -1,4 +1,4 @@
-name: prediction
+name: easyfuse-prediction
 channels:
   - conda-forge
   - bioconda

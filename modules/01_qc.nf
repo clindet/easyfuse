@@ -4,7 +4,7 @@ process FASTP {
     memory "8g"
     tag "${name}"
 
-    conda ("${baseDir}/environments/qc.yml")
+    conda '/public/home/lijf/env/miniconda3/envs/easyfuse-qc'
 
     input:
       tuple val(name), path(fastq1), path(fastq2)

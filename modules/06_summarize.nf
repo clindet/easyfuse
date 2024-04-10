@@ -5,7 +5,8 @@ process MERGE_DATA {
     tag "${name}"
     publishDir "${params.output}/${name}", mode: 'copy'
     
-    conda ("${baseDir}/environments/merging.yml")
+    //conda ("${baseDir}/environments/merging.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-merging"
 
     input:
       tuple val(name), path(detected_fusions), path(annot_fusions_csv), path(annot_fusions_csv_debug), path(annot_fusions_fasta), path(counts), path(read_stats)
@@ -31,7 +32,8 @@ process PREDICTION {
     tag "${name}"
     publishDir "${params.output}/${name}", mode: 'copy'
 
-    conda ("${baseDir}/environments/prediction.yml")
+    //conda ("${baseDir}/environments/prediction.yml")
+    conda "/public/home/lijf/env/miniconda3/envs/easyfuse-prediction"
 
     input:
       tuple val(name), path(merged_results)

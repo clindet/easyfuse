@@ -1,4 +1,4 @@
-name: fusioncatcher
+name: easyfuse-fusioncatcher
 channels:
   - conda-forge
   - bioconda

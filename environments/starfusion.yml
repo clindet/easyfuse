@@ -1,4 +1,4 @@
-name: starfusion
+name: easyfuse-starfusion
 channels:
   - conda-forge
   - bioconda
