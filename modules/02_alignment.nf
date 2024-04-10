@@ -86,8 +86,8 @@ process STAR_ARRIBA {
 
 
 process READ_FILTER {
-    cpus 4
-    memory "12g"
+    cpus 20
+    memory "60g"
     tag "${name}"
 
     //conda ("${baseDir}/environments/filtering.yml")

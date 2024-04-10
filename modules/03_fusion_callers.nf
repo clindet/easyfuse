@@ -1,6 +1,6 @@
 
 process FUSION_CATCHER_INDEX {
-    cpus 6
+    cpus 10
     memory "32g"
     tag "${name}"
 
@@ -15,7 +15,7 @@ process FUSION_CATCHER_INDEX {
 
 
 process FUSION_CATCHER {
-    cpus 6
+    cpus 10
     memory "32g"
     tag "${name}"
 
@@ -41,7 +41,7 @@ process FUSION_CATCHER {
 }
 
 process STAR_FUSION {
-    cpus 6
+    cpus 10
     memory "32g"
     tag "${name}"
 
@@ -67,8 +67,8 @@ process STAR_FUSION {
 }
 
 process ARRIBA {
-    cpus 1
-    memory "10g"
+    cpus 10
+    memory "20g"
     tag "${name}"
 
     //conda ("${baseDir}/environments/arriba.yml")
